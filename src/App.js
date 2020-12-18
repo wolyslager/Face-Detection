@@ -92,7 +92,7 @@ loadUser = (data) => {
 
   onButtonSubmit = () => {
   	this.setState({imageURL:this.state.input})
-  	  fetch('https://vast-sands-42855.herokuapp.com//imageurl', {
+  	  fetch('https://calm-plains-70596.herokuapp.com/imageurl', {
         method:'post',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
@@ -102,7 +102,7 @@ loadUser = (data) => {
       .then(response => response.json())
   		.then(response => {
         if(response){
-          fetch('https://vast-sands-42855.herokuapp.com//image', {
+          fetch('https://calm-plains-70596.herokuapp.com/image', {
             method:'put',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({
